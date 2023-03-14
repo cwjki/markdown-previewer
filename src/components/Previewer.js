@@ -4,7 +4,7 @@ import editorMessage from "../data/data";
 
 const html = marked.parse("# Marked in Node.js\n\nRendered by **marked**.");
 
-const Editor = () => {
+const Previewer = () => {
   const [msg, setMsg] = useState(editorMessage);
 
   return (
@@ -84,4 +84,4 @@ const Editor = () => {
   );
 };
 
-export default Editor;
+export default Previewer;
