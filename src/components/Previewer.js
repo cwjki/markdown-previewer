@@ -1,11 +1,17 @@
 import { marked } from "marked";
 import { useState } from "react";
-import editorMessage from "../data/data";
+import initialMsg from "../data/data";
 
-const html = marked.parse("# Marked in Node.js\n\nRendered by **marked**.");
 
 const Previewer = () => {
-  const [msg, setMsg] = useState(editorMessage);
+  const [msgMarkdown, setMsgMarkdown] = useState(initialMsg);
+  const [msgHtml, setMsgHtml] = useState(marked.parse(initialMsg));
+
+  const onChange = (e) => {
+    setMsgMarkdown(e.target.value);
+    setMsgHtml(marked.parse(msgMarkdown));
+    console.log(msgHtml);
+  };
 
   return (
     <div className="">
@@ -29,8 +35,9 @@ const Previewer = () => {
                   className="form-control"
                   id="editorTextArea"
                   rows="25"
+                  onChange={onChange}
                 >
-                  {msg}
+                  {msgMarkdown}
                 </textarea>
               </div>
             </div>
@@ -49,8 +56,8 @@ const Previewer = () => {
                   className="form-control"
                   id="previewerTextArea"
                   rows="25"
+                  value={msgHtml}
                 >
-                  {msg}
                 </textarea>
               </div>
             </div>
