@@ -21,15 +21,15 @@ const Previewer = () => {
   // }
 
   return (
-    <div className="">
+    <div className="container-fluid h-100">
       {/* Navbar */}
-      <nav className="navbar">
+      <nav className="navbar h-20">
         <div className="container-fluid justify-content-center">
           <span className="navbar-brand mb-0 h1">Markdown Previewer</span>
         </div>
       </nav>
 
-      <div className="row align-items-center">
+      <div className="row align-items-center h-80">
         {/* Editor */}
         <div className="col-6">
           <div className="card bg-warning text-primary rounded-4">
@@ -52,14 +52,15 @@ const Previewer = () => {
         </div>
 
         {/* Previewer */}
-        <div className="col-6">
-          <div className="card bg-warning text-primary rounded-4">
+        <div className="col-6 border previewerCard">
+          <div className="card bg-warning text-primary rounded-4 ">
             <p className="text-center text-primary fs-4 border-bottom border-dark border-3">
               Previewer
             </p>
-            <div className="container pb-3">
+            <div className="container pb-3 ">
               <div className="card-body">
-                <div dangerouslySetInnerHTML={getMarkdownText()} />;
+                 <div className="border" dangerouslySetInnerHTML={getMarkdownText()} />
+
 
               </div>
             </div>
