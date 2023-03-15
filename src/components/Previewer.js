@@ -21,26 +21,28 @@ const Previewer = () => {
   // }
 
   return (
-    <div className="container-fluid h-100">
+    <div className="container-fluid vh-100">
+     
       {/* Navbar */}
-      <nav className="navbar h-20">
+      <nav className="navbar">
         <div className="container-fluid justify-content-center">
           <span className="navbar-brand mb-0 h1">Markdown Previewer</span>
         </div>
       </nav>
 
-      <div className="row align-items-center h-80">
+      <div className="row align-items-center ">
+
         {/* Editor */}
-        <div className="col-6">
+        <div className="col-sm-6 col-12">
           <div className="card bg-warning text-primary rounded-4">
             <p className="text-center text-primary fs-4 border-bottom border-dark border-3">
               Editor
             </p>
-            <div className="container pb-3">
+            <div className="container-fluid pb-3">
               <div className="">
                 <textarea
                   className="form-control"
-                  id="editorTextArea"
+                  id="editor"
                   rows="25"
                   onChange={onChange}
                 >
@@ -52,14 +54,14 @@ const Previewer = () => {
         </div>
 
         {/* Previewer */}
-        <div className="col-6 border previewerCard">
-          <div className="card bg-warning text-primary rounded-4 ">
+        <div className="col-sm-6 col-12 border">
+          <div className="card bg-warning rounded-4">
             <p className="text-center text-primary fs-4 border-bottom border-dark border-3">
               Previewer
             </p>
-            <div className="container pb-3 ">
-              <div className="card-body">
-                 <div className="border" dangerouslySetInnerHTML={getMarkdownText()} />
+            <div className="container-fluid pb-3">
+              <div className="bg-white rounded-2 overflow-auto">
+                 <div id="preview" className="p-3" dangerouslySetInnerHTML={getMarkdownText()} />
 
 
               </div>
