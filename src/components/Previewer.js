@@ -5,13 +5,20 @@ import initialMsg from "../data/data";
 
 const Previewer = () => {
   const [msgMarkdown, setMsgMarkdown] = useState(initialMsg);
-  const [msgHtml, setMsgHtml] = useState(marked.parse(initialMsg));
 
   const onChange = (e) => {
     setMsgMarkdown(e.target.value);
-    setMsgHtml(marked.parse(msgMarkdown));
-    console.log(msgHtml);
   };
+
+  function getMarkdownText() {
+    let rawMarkup = marked.parse(msgMarkdown);
+    return { __html: rawMarkup };
+  }
+
+  // function createMarkup() {
+  //   console.log(msgHtml)
+  //   return {__html: msgHtml};
+  // }
 
   return (
     <div className="">
@@ -51,14 +58,9 @@ const Previewer = () => {
               Previewer
             </p>
             <div className="container pb-3">
-              <div className="">
-                <textarea
-                  className="form-control"
-                  id="previewerTextArea"
-                  rows="25"
-                  value={msgHtml}
-                >
-                </textarea>
+              <div className="card-body">
+                <div dangerouslySetInnerHTML={getMarkdownText()} />;
+
               </div>
             </div>
           </div>
@@ -70,20 +72,20 @@ const Previewer = () => {
         <div className="container-fluid justify-content-end">
           <span className="navbar-brand fs-6 fw-semibold">by cwjki</span>
           <a
-            class="navbar-brand"
+            className="navbar-brand"
             href="https://github.com/cwjki"
             target="_blank"
             rel="noreferrer"
           >
-            <i class="bi bi-github"></i>
+            <i className="bi bi-github"></i>
           </a>
           <a
-            class="navbar-brand"
+            className="navbar-brand"
             href="https://www.linkedin.com/in/juan-carlos-casteleiro/"
             target="_blank"
             rel="noreferrer"
           >
-            <i class="bi bi-linkedin"></i>
+            <i className="bi bi-linkedin"></i>
           </a>
         </div>
       </nav>
