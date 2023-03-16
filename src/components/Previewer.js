@@ -54,7 +54,7 @@ const Previewer = () => {
         </div>
 
         {/* Previewer */}
-        <div className="col-sm-6 col-12 border">
+        <div className="col-sm-6 col-12">
           <div className="card bg-warning rounded-4">
             <p className="text-center text-primary fs-4 border-bottom border-dark border-3">
               Previewer
