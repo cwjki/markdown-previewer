@@ -3,8 +3,10 @@ $primary: #00ffc3;
 $secondary: #05f1b9;
 $warning: #1e2d40;
 
-
-
+*{
+    font-size: medium;
+    font-family: 'Helvetica', 'Open Sans', 'Helvetica Neue', sans-serif
+}
 
 // Import Bootstrap and its default variables
 @import '~bootstrap/scss/bootstrap.scss';

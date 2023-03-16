@@ -1,5 +1,4 @@
 import Previewer from "./components/Previewer";
-import "bootstrap/dist/css/bootstrap.css";
 
 function App() {
   return (
