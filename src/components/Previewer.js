@@ -16,13 +16,12 @@ const Previewer = () => {
   };
 
   function getMarkdownText() {
-    let rawMarkup = marked.parse(msgMarkdown, );
+    let rawMarkup = marked.parse(msgMarkdown);
     return { __html: rawMarkup };
   }
 
   return (
-    <div className="container-fluid vh-100">
-     
+    <div className="container-fluid">
       {/* Navbar */}
       <nav className="navbar">
         <div className="container-fluid justify-content-center">
@@ -30,8 +29,7 @@ const Previewer = () => {
         </div>
       </nav>
 
-      <div className="row align-items-center ">
-
+      <div className="row align-items-center">
         {/* Editor */}
         <div className="col-sm-6 col-12">
           <div className="card bg-warning text-primary rounded-4">
@@ -60,10 +58,12 @@ const Previewer = () => {
               Previewer
             </p>
             <div className="container-fluid pb-3">
-              <div className="bg-white rounded-2 overflow-auto">
-                 <div id="preview" className="p-3" dangerouslySetInnerHTML={getMarkdownText()} />
-
-
+              <div className="bg-white rounded-2">
+                <div
+                  id="preview"
+                  className="preview p-3"
+                  dangerouslySetInnerHTML={getMarkdownText()}
+                />
               </div>
             </div>
           </div>
@@ -71,7 +71,7 @@ const Previewer = () => {
       </div>
 
       {/* Footer */}
-      <nav className="navbar">
+      <nav className="navbar pb-4 mt-1">
         <div className="container-fluid justify-content-end">
           <span className="navbar-brand fs-6 fw-semibold">by cwjki</span>
           <a

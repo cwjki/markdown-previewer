@@ -2,7 +2,7 @@ import Previewer from "./components/Previewer";
 
 function App() {
   return (
-    <div className="container-fluid bg-secondary vh-100 vw-100">
+    <div className="bg-primary">
       <Previewer />
     </div>
   );

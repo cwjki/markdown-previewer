@@ -11,8 +11,8 @@ const initialMsg = "" +
 "\n  console.log('Hello world');" +
 "\n}\n```" +
 "\n\nYou can also make text **bold**... whoa!" +
-"\nOr _italic_.</br>" +
-"\nOr... wait for it... **_both!_** </br>" +
+"\nOr _italic_." +
+"\nOr... wait for it... **_both!_**" +
 "\nAnd feel free to go crazy ~~crossing stuff out~~." +
 "\n\nThis is a link to the project [specifications](https://www.freecodecamp.org/learn/front-end-development-libraries/front-end-development-libraries-projects/build-a-markdown-previewer)." + 
 "\n\n![freeCodeCamp Logo](https://cdn.freecodecamp.org/testable-projects-fcc/images/fcc_secondary.svg)" +

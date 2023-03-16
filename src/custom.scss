@@ -14,5 +14,10 @@ $warning: #1e2d40;
     margin: 2rem auto;
 }
 
+.preview {
+    max-height: 100%;
+    overflow-y: auto;
+}
+
 // Import Bootstrap and its default variables
 @import '~bootstrap/scss/bootstrap.scss';
