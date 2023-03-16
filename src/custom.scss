@@ -8,5 +8,11 @@ $warning: #1e2d40;
     font-family: 'Helvetica', 'Open Sans', 'Helvetica Neue', sans-serif
 }
 
+#preview img {
+    display: block;
+    max-width: 50%;
+    margin: 2rem auto;
+}
+
 // Import Bootstrap and its default variables
 @import '~bootstrap/scss/bootstrap.scss';
