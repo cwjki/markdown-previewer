@@ -2,6 +2,11 @@ import { marked } from "marked";
 import { useState } from "react";
 import initialMsg from "../data/data";
 
+// Set options
+marked.setOptions({
+  gfm: true,
+  breaks: true,
+});
 
 const Previewer = () => {
   const [msgMarkdown, setMsgMarkdown] = useState(initialMsg);
@@ -11,14 +16,9 @@ const Previewer = () => {
   };
 
   function getMarkdownText() {
-    let rawMarkup = marked.parse(msgMarkdown);
+    let rawMarkup = marked.parse(msgMarkdown, );
     return { __html: rawMarkup };
   }
-
-  // function createMarkup() {
-  //   console.log(msgHtml)
-  //   return {__html: msgHtml};
-  // }
 
   return (
     <div className="container-fluid vh-100">
