@@ -29,9 +29,9 @@ const Previewer = () => {
         </div>
       </nav>
 
-      <div className="row align-items-center">
+      <div className="row align-items-center mt-2">
         {/* Editor */}
-        <div className="col-sm-6 col-12">
+        <div className="col-md-6 col-12">
           <div className="card bg-warning text-primary rounded-4">
             <p className="text-center text-primary fs-4 border-bottom border-dark border-3">
               Editor
@@ -41,7 +41,7 @@ const Previewer = () => {
                 <textarea
                   className="form-control"
                   id="editor"
-                  rows="25"
+                  rows="27"
                   onChange={onChange}
                 >
                   {msgMarkdown}
@@ -52,7 +52,7 @@ const Previewer = () => {
         </div>
 
         {/* Previewer */}
-        <div className="col-sm-6 col-12">
+        <div className="col-md-6 col-12">
           <div className="card bg-warning rounded-4 customCard">
             <p className="text-center text-primary fs-4 border-bottom border-dark border-3">
               Previewer
@@ -71,7 +71,7 @@ const Previewer = () => {
       </div>
 
       {/* Footer */}
-      <nav className="navbar pb-4 mt-1">
+      <nav className="navbar pb-4">
         <div className="container-fluid justify-content-end">
           <span className="navbar-brand fs-6 fw-semibold">by cwjki</span>
           <a
