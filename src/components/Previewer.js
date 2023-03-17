@@ -53,15 +53,15 @@ const Previewer = () => {
 
         {/* Previewer */}
         <div className="col-sm-6 col-12">
-          <div className="card bg-warning rounded-4">
+          <div className="card bg-warning rounded-4 customCard">
             <p className="text-center text-primary fs-4 border-bottom border-dark border-3">
               Previewer
             </p>
             <div className="container-fluid pb-3">
-              <div className="bg-white rounded-2">
+              <div className="bg-white preview rounded-2">
                 <div
                   id="preview"
-                  className="preview p-3"
+                  className="p-3"
                   dangerouslySetInnerHTML={getMarkdownText()}
                 />
               </div>

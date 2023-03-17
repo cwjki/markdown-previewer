@@ -14,8 +14,12 @@ $warning: #1e2d40;
     margin: 2rem auto;
 }
 
+.customCard {
+    max-height: 1000px;
+}
+
 .preview {
-    max-height: 100%;
+    max-height: 580px;
     overflow-y: auto;
 }
 
