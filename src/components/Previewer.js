@@ -25,15 +25,15 @@ const Previewer = () => {
       {/* Navbar */}
       <nav className="navbar">
         <div className="container-fluid justify-content-center">
-          <span className="navbar-brand mb-0 h1">Markdown Previewer</span>
+          <span className="navbar-brand h1 fs-4 mb-0">MARKDOWN PREVIEWER</span>
         </div>
       </nav>
 
-      <div className="row align-items-center mt-2">
+      <div className="row align-items-center g-4 mx-auto">
         {/* Editor */}
-        <div className="col-md-6 col-12">
-          <div className="card bg-warning text-primary rounded-4">
-            <p className="text-center text-primary fs-4 border-bottom border-dark border-3">
+        <div className="col-md-6 col-sm-12">
+          <div className="card bg-primary text-warning rounded-4 p-1">
+            <p className="text-center text-warning fs-4 border-bottom border-dark border-3 py-1">
               Editor
             </p>
             <div className="container-fluid pb-3">
@@ -52,9 +52,9 @@ const Previewer = () => {
         </div>
 
         {/* Previewer */}
-        <div className="col-md-6 col-12">
-          <div className="card bg-warning rounded-4 customCard">
-            <p className="text-center text-primary fs-4 border-bottom border-dark border-3">
+        <div className="col-md-6 col-sm-12">
+          <div className="card bg-primary rounded-4 customCard p-1">
+            <p className="text-center text-warning fs-4 border-bottom border-dark border-3 py-1">
               Previewer
             </p>
             <div className="container-fluid pb-3">
@@ -71,7 +71,7 @@ const Previewer = () => {
       </div>
 
       {/* Footer */}
-      <nav className="navbar pb-4">
+      <nav className="navbar pb-2">
         <div className="container-fluid justify-content-end">
           <span className="navbar-brand fs-6 fw-semibold">by cwjki</span>
           <a
