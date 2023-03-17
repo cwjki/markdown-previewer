@@ -39,7 +39,7 @@ const Previewer = () => {
             <div className="container-fluid pb-3">
               <div className="">
                 <textarea
-                  className="form-control"
+                  className="form-control rounded-1"
                   id="editor"
                   rows="27"
                   onChange={onChange}
@@ -58,7 +58,7 @@ const Previewer = () => {
               Previewer
             </p>
             <div className="container-fluid pb-3">
-              <div className="bg-white preview rounded-2">
+              <div className="bg-white preview rounded-1">
                 <div
                   id="preview"
                   className="p-3"
